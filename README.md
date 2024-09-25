@@ -19,12 +19,27 @@ For LaunchDarkly to work you need to add a `.env` file with the following:
 LAUNCHDARKLY_CLIENT_ID=<Your Client ID>
 ```
 
+## Terraform
+
+Use the Terraform CLI to provision the project in your LaunchDarkly account:
+
+```
+terraform init
+terraform validate
+terraform apply -var="LAUNCHDARKLY_ACCESS_TOKEN=your_access_token" -var="project=your_project_name" -auto-approve
+```
+
+Make sure to pass the folowing variables:
+
+- LAUNCHDARKLY_ACCESS_TOKEN
+- project
+
 ## Docker
 
 To run in Docker, first build the image:
 
 ```
-docker build -t staff-picks .  
+docker build -t staff-picks .
 ```
 
 Then run the image using the following command:

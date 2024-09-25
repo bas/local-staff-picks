@@ -3,5 +3,5 @@ variable "LAUNCHDARKLY_ACCESS_TOKEN" {
 }
 
 variable "project" {
-  default = "bas-staff-picks"
+  type = string
 }
